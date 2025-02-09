@@ -2,7 +2,7 @@
 FROM node:20
 
 # Set working directory
-WORKDIR ./
+WORKDIR /src
 
 # Copy project files
 COPY . .
@@ -11,7 +11,7 @@ COPY . .
 RUN npm install
 
 # Expose backend port
-EXPOSE 3000
+EXPOSE 8080
 
 # Start server
 CMD ["npm", "run", "dev"]
